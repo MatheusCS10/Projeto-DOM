@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carrinho de Compras</title>
+  <link rel="stylesheet" href="src/Carrinho/carrinho.css">
+</head>
+
+<body>
+  <header>
+    <h1>Carrinho de Compras</h1>
+  </header>
+
+  <main>
+    <section class="cart-container">
+      <h2>Seu Carrinho</h2>
+      <div id="cart-items" class="cart-items">
+        <!-- Produtos adicionados ao carrinho serão exibidos aqui -->
+      </div>
+      <div class="cart-summary">
+        <p>Total: <span id="total-price">R$ 0,00</span></p>
+        <button id="checkout-btn">Finalizar Compra</button>
+      </div>
+    </section>
+
+    <!-- Modal para simular o processo de checkout -->
+    <div id="checkout-modal" class="modal hidden">
+      <div class="modal-content">
+        <h2>Obrigado pela sua compra!</h2>
+        <p>Sua compra foi processada com sucesso.</p>
+        <button id="close-modal">Fechar</button>
+      </div>
+    </div>
+  </main>
+
+  <script type="module" src="src/Carrinho/carrinho.ts"></script>
+</body>
+
+</html>

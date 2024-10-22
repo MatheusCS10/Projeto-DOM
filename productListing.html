@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/ProductListing/productListing.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Produtos</title>
+</head>
+
+<body>
+    <header>
+        <div class="navbar">
+            <h1>Product Listing</h1>
+            <div>
+                <i class="fa-solid fa-cart-shopping cart"></i>
+                <div class="user-container">
+                    <p class="username"> Gustavo </p>
+                    <i class="fa-solid fa-circle-user user"></i>
+                    <div class="dropdown">
+                        <p id="logout"> <i class="fa-solid fa-arrow-right-from-bracket"> </i> Sair</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section>
+        <select id="sort-menu">
+            <option value="" disabled selected>Ordenar
+            </option>
+            <option value="alfabetica">Nome (A-Z)</option>
+            <option value="crescente">Preço (Menor para Maior)</option>
+            <option value="decrescente">Preço (Maior para Menor)</option>
+        </select>
+    </section>
+    <main>
+        <aside>
+            <h3>
+                <i class="fa-solid fa-filter"></i>
+                Filtrar
+            </h3>
+            <div class="filter-group">
+                <h3>Categoria</h3>
+                <label><input value="women's clothing" name="category" type="radio">Roupas Femininas</label>
+                <label><input value="men's clothing" name="category" type="radio">Roupas Masculinas</label>
+                <label><input value="jewelery" name="category" type="radio">Jóias</label>
+                <label><input value="electronics" name="category" type="radio">Eletrônicos</label>
+            </div>
+        </aside>
+        <div class="product-grid" id="product-grid">
+            <!-- Product cards will be generated here -->
+        </div>
+        <div class="loading">
+            <div class="load">
+                <span class="material-symbols-outlined icon">
+                    refresh
+                </span>
+            </div>
+        </div>
+    </main>
+    <script type="module" src="src/ProductListing/productListing.ts"></script>
+</body>
+
+
+</html>

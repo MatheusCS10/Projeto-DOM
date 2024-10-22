@@ -1,0 +1,268 @@
+body {
+  background-color: #f5f5f5;
+  color: #333333;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  padding-bottom: 2vh;
+}
+
+.navbar {
+  background-color: #ffffff;
+  padding: 1.5vh 2vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 7vh;
+  border-bottom: 1px solid #cccccc;
+}
+.navbar div {
+  display: flex;
+  align-items: center;
+  gap:  2vw;
+  height: 100%;
+}
+
+.navbar h1 {
+  color: #333333;
+  margin: 0;
+  font-size: 3.5vh;
+}
+
+.navbar div:first-child {
+  display: flex;
+  align-items: center;
+}
+.cart {
+  font-size: 4.5vh;
+  cursor: pointer;
+  color: #333333;
+}
+.user-container {
+  display: flex;
+  align-items: center;
+  gap: 1vw;
+  justify-content: space-between;
+  position: relative;
+  width: fit-content;
+}
+
+.user {
+  font-size: 4.5vh;
+  cursor: pointer;
+  color: #333333;
+}
+
+.dropdown {
+  font-size: 2.5vh;
+  position: absolute;
+  top: 7vh;
+  left: 0;
+  background-color: #ffffff;
+  padding: 2vh 1vw;
+  box-sizing: border-box;
+  width: 100%;
+  z-index: 10;
+  border: 1px solid #cccccc;
+  transform: scaleY(0);
+}
+
+.user-container:hover .dropdown {
+  transform: scaleY(1);
+  transform-origin: top;
+  transition: transform 0.3s linear;
+}
+
+.dropdown p {
+  cursor: pointer;
+  color: #333333;
+}
+
+.dropdown p:hover {
+  color: #000000;
+}
+
+section {
+  display: flex;
+  justify-content: right;
+  margin: 2vh 2vw 0 0;
+}
+
+select {
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  color: #333333;
+  font-size: 2.5vh;
+  padding: 1vh;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+
+main {
+  display: flex;
+  box-sizing: border-box;
+  padding: 3vh 2vw;
+  gap: 2vw;
+  width: 100%;
+}
+
+aside {
+  height: fit-content;
+  padding: 1vh 0 2vh 1vw;
+  border-radius: 10px;
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  width: 20%;
+}
+
+aside h3 {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+}
+
+input[type="checkbox"] {
+  cursor: pointer;
+}
+
+.product-grid {
+  display: grid;
+  box-sizing: border-box;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1vw;
+  width: 80%;
+}
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  gap: 1vh;
+  background-color: #ffffff;
+  padding: 2vh;
+  border-radius: 10px;
+  border: 1px solid #cccccc;
+  width: 20vw;
+  transition: linear 0.2s;
+}
+
+.product-card img {
+  width: 15vw;
+  height: 17vw;
+  border-radius: 8px;
+  margin: 0 auto;
+}
+
+.product-card h4 {
+  font-size: 2.5vh;
+  color: #333333;
+  height: 11vh;
+  line-height: 3.5vh;
+  overflow: hidden;
+  width: 100%;
+}
+
+.product-card p {
+  font-size: 4vh;
+  font-weight: bolder;
+}
+
+p {
+  margin: 0;
+}
+ .product-card button {
+   background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+   background-size: 400% 400%;
+   padding: 1vh 2vw;
+   border: none;
+   border-radius: 4px;
+   cursor: pointer;
+   transition: linear .2s;
+   animation: gradietFadeOut 1s ease forwards;
+   color: #ffffff;
+ }
+
+ .product-card button:first-of-type {
+   width: 90%;
+ }
+
+ .product-card button:nth-child(2) {
+   font-size: 3vh;
+ }
+
+ .product-card button:hover {
+   animation: gradientAnimation 1s ease forwards;
+   transition: linear .2s;
+   transform: translateY(-2px);
+ }
+
+ @keyframes gradientAnimation {
+   0% {
+     background-position: 0% 50%;
+   }
+
+   100% {
+     background-position: 100% 50%;
+   }
+ }
+
+ @keyframes gradietFadeOut {
+   0% {
+     background-position: 100% 50%;
+   }
+
+   100% {
+     background-position: 0% 50%;
+   }
+ }
+.container-btn {
+  display: flex;
+  gap: 1vw;
+}
+
+.loading {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.5);
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+
+.show {
+  display: flex;
+}
+
+.load {
+  color: #333333;
+  padding: 2vh;
+  background-color: #ffffff;
+  border-radius: 15px;
+}
+
+.icon {
+  font-size: 10vh;
+  animation: spin 1s ease-out infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
